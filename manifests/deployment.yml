@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: zrakhimovpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: zrakhimovpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: zrakhimovpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: zrakhimovpipelinesjavascriptdocker 
+          image: zrcontainerregistry.azurecr.io/zrakhimovpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
